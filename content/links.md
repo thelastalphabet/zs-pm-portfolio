@@ -1,0 +1,2 @@
+- LinkedIn: www.linkedin.com/in/zehra-mehdi
+- Email: zehramehdi12@gmail.com

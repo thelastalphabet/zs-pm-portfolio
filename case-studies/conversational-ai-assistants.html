@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversational AI Assistants — Zehra Mehdi</title>
+<meta name="description" content="How Zehra Mehdi directed WGU's first LLM/RAG-based conversational AI assistant from concept to deployment, driving accuracy from 15% to 81.7% and $1M+ in annual savings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html#home" class="brand"><span class="mark">ZM</span> Zehra Mehdi</a>
+    <div class="nav-links">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Featured Work</a>
+      <a href="../index.html#projects">Side Projects</a>
+      <a href="../index.html#contact" class="nav-cta">Contact Me</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">← Back to Featured Work</a>
+    <div class="cs-meta-row">
+      <span class="cs-tag">AI &amp; Automation</span>
+      <span class="cs-tag">Conversational AI</span>
+      <span class="cs-tag">Western Governors University</span>
+    </div>
+    <h1>Conversational AI Assistants: A Product Case Study</h1>
+    <p class="dek">Transforming student support through conversational AI — from concept to deployment. Directing WGU's first LLM/RAG-based chatbot as a digital concierge for the entire student journey.</p>
+    <div class="cs-stats">
+      <div class="stat"><b>81.7%</b><span>Accuracy, up from 15%</span></div>
+      <div class="stat"><b>97.5%</b><span>Relevance, up from 86%</span></div>
+      <div class="stat"><b>21%</b><span>Support call volume reduction</span></div>
+      <div class="stat"><b>$1M+</b><span>Annual operational savings</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="cs-body">
+  <div class="wrap cs-layout">
+    <aside class="cs-toc">
+      <span class="lbl">On this page</span>
+      <a href="#challenge">The Challenge</a>
+      <a href="#discovery">Discovery</a>
+      <a href="#vision">Vision &amp; Tenets</a>
+      <a href="#architecture">Architecture &amp; Evaluation</a>
+      <a href="#results">Results</a>
+      <a href="#challenges-solved">Challenges &amp; Solutions</a>
+      <a href="#roadmap">Roadmap &amp; Takeaways</a>
+    </aside>
+
+    <div class="cs-content">
+
+      <div class="cs-section" id="challenge">
+        <h2><span class="num">01</span>The Challenge</h2>
+        <p>Students frequently got blocked by basic questions when support was unavailable, while support staff spent significant time answering repetitive inquiries — resulting in delayed progress for students and reduced capacity for personalized support.</p>
+        <div class="cs-grid3">
+          <div class="cs-card"><span class="n">70K</span><h4>Monthly support inquiries</h4><p>Roughly 1 inquiry for every 2 learners at WGU.</p></div>
+          <div class="cs-card"><span class="n">60K</span><h4>Monthly applications</h4><p>Processed by Admissions and Enrollment teams.</p></div>
+          <div class="cs-card"><span class="n">40%</span><h4>"Night owl" learners</h4><p>Active between 9pm–1am, when staff aren't available.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-section" id="discovery">
+        <h2><span class="num">02</span>Discovery</h2>
+        <div class="cs-grid2">
+          <div class="cs-card">
+            <h4>UX research findings</h4>
+            <p>Chatbot ranked top 3 preferred channels alongside email and SMS. Students wanted AI as an additional resource, but needed human connection for complex issues — and were frustrated by the lack of 24×7 support.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Market context</h4>
+            <p>42% of higher-ed leaders prioritize AI for customer service (Grammarly, 2025), and chatbots are evolving beyond Q&amp;A into agentic capabilities.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Data analysis</h4>
+            <p>10% of enrollment calls involve questions already on the website. 21% of support inquiries are answered in the Student Handbook. 25–48% of assessment calls are simple how-to requests.</p>
+          </div>
+          <div class="cs-card">
+            <h4>Domain expert input</h4>
+            <p>Reduce cost per new student start, proactively detect and support struggling applicants, and enable real-time chat for instant answers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-section" id="vision">
+        <h2><span class="num">03</span>Vision &amp; Product Tenets</h2>
+        <div class="cs-callout">
+          <b>Product vision:</b> A digital concierge — a conversational AI companion designed as a trusted guide throughout the entire student journey, from enrollment through graduation — delivering instant support, anticipating the next step, and seamlessly connecting to human experts when it matters most.
+        </div>
+        <p style="margin-top:22px;">I anchored the build in six product tenets so the team could make fast, consistent trade-off calls:</p>
+        <ul class="cs-list">
+          <li><span class="k">01</span><div><b>Human Connection First</b>Help learners get information quickly, but never replace the essential human connection in learning.</div></li>
+          <li><span class="k">02</span><div><b>Do the Heavy Lifting</b>Do for learners what they shouldn't have to do for themselves.</div></li>
+          <li><span class="k">03</span><div><b>Context-Aware Experiences</b>Tailor experiences to the learner's context and sentiment so they can choose their next best step.</div></li>
+          <li><span class="k">04</span><div><b>Safeguards &amp; Integrity</b>Build guardrails so support and academic-integrity policies are upheld.</div></li>
+          <li><span class="k">05</span><div><b>Security &amp; Privacy</b>Uphold the highest standards of security and confidentiality in every interaction.</div></li>
+          <li><span class="k">06</span><div><b>Continuous Improvement</b>Get better with learners through ongoing feedback and measurable outcomes.</div></li>
+        </ul>
+      </div>
+
+      <div class="cs-section" id="architecture">
+        <h2><span class="num">04</span>Architecture &amp; Evaluation Strategy</h2>
+        <div class="cs-grid3">
+          <div class="cs-card"><h4>Databricks Model Platform</h4><p>Custom LLM hosted and trained on WGU content.</p></div>
+          <div class="cs-card"><h4>Genesys Web Messenger</h4><p>Front-end chat experience and omnichannel platform.</p></div>
+          <div class="cs-card"><h4>Salesforce CRM</h4><p>Transcript storage and counselor workspace.</p></div>
+        </div>
+        <p style="margin-top:18px;">POCs validated integrations before the build phase; the architecture was approved despite known Genesys limitations, given WGU's existing omnichannel investment. Phase 1 was scoped to enrollment content only — website data and public Student Handbook pages, with blog content excluded to maintain focus, refreshed via a daily scrape-chunk-embed pipeline.</p>
+        <p style="margin-top:26px; font-weight:600; color:var(--navy-950);">Evaluation strategy, in four moves:</p>
+        <ul class="cs-list">
+          <li><span class="k">1</span><div><b>Manual evaluation guide</b>Built a rubric for SMEs — pass/fail criteria, criticality ratings (low/medium/high), and documentation of glaring issues.</div></li>
+          <li><span class="k">2</span><div><b>SME testing rounds</b>Pulled subject matter experts into accuracy and relevance evaluation as soon as the model was created.</div></li>
+          <li><span class="k">3</span><div><b>Golden dataset creation</b>Used SME responses to build an evaluation dataset that evolved into the long-term QA benchmark.</div></li>
+          <li><span class="k">4</span><div><b>Iterative refinement</b>Simplified Phase 2 to pass/fail, documenting only failures per rubric category.</div></li>
+        </ul>
+      </div>
+
+      <div class="cs-section" id="results">
+        <h2><span class="num">05</span>Results: Dramatic Improvement</h2>
+        <p>Within three months, the team completed critical foundational development: a model trained on all public WGU content, built-in guardrails, and source-backed responses. Multi-phase evaluation drove significant improvement through AI engineering, product/UX, and enrollment SME testing.</p>
+        <div class="cs-grid2">
+          <div class="cs-card"><span class="n">15% → 81.7%</span><h4>Accuracy</h4><p>Driven by rubric-based SME testing and a growing golden dataset.</p></div>
+          <div class="cs-card"><span class="n">86% → 97.5%</span><h4>Relevance</h4><p>Iterative refinement against real student questions.</p></div>
+        </div>
+      </div>
+
+      <div class="cs-section" id="challenges-solved">
+        <h2><span class="num">06</span>Challenges &amp; Solutions</h2>
+
+        <div class="cs-challenge">
+          <div class="row">
+            <div class="cell problem"><small>Challenge</small>25+ team members across data engineering, ML, product, UX, and infrastructure — with unclear roles, since this was WGU's first LLM product.</div>
+            <div class="cell solution"><small>Solution</small>Built a comprehensive roles &amp; responsibilities matrix spanning development, deployment, and production.</div>
+          </div>
+        </div>
+        <div class="cs-challenge">
+          <div class="row">
+            <div class="cell problem"><small>Challenge</small>Scope disagreement: the business wanted full website coverage vs. product's FAQ-only recommendation.</div>
+            <div class="cell solution"><small>Solution</small>Documented the risks — scraping time, evaluation complexity, hallucination — and proceeded with the business decision.</div>
+          </div>
+        </div>
+        <div class="cs-challenge">
+          <div class="row">
+            <div class="cell problem"><small>Challenge</small>Business insisted on live human hand-off and full Salesforce transcript integration vs. a simple contact-us redirect.</div>
+            <div class="cell solution"><small>Solution</small>Called out the technical complexity and timeline risk, then proceeded with the business priority.</div>
+          </div>
+        </div>
+
+        <p style="margin-top:8px; font-weight:600; color:var(--navy-950);">Genesys platform limitations, surfaced during build:</p>
+        <ul class="cs-list">
+          <li><span class="k">!</span><div><b>UX gaps</b>No loading indicator for delayed responses (3+ seconds), no streaming for partial responses, no placement for an "AI can make mistakes" warning, and no in-chat form support unlike Salesforce chat.</div></li>
+          <li><span class="k">!</span><div><b>PII masking</b>Applied universally rather than per-channel; Legal approved proceeding without masking for the authenticated enrollment experience.</div></li>
+          <li><span class="k">!</span><div><b>Resourcing</b>Only two engineers and one architect on the build — I recommended engaging Genesys for roadmap acceleration, evaluating alternative front-ends while keeping the Genesys backend, and planning for additional engineering capacity.</div></li>
+        </ul>
+      </div>
+
+      <div class="cs-section" id="roadmap">
+        <h2><span class="num">07</span>Roadmap &amp; Key Takeaways</h2>
+        <div class="cs-grid3">
+          <div class="cs-card"><span class="n">1–2</span><h4>MVP Chatbots → Simple Automations</h4><p>Launch for enrollment and support with human-in-the-loop, then extend to tickets, scheduling, and retrieval agents.</p></div>
+          <div class="cs-card"><span class="n">3–4</span><h4>Proactive Nudges → Advanced Use Cases</h4><p>Chatbot-driven engagement, then tutoring and motivational support.</p></div>
+          <div class="cs-card"><span class="n">5</span><h4>Agentic Capabilities</h4><p>From simple workflows to complex, multi-step agentic workflows.</p></div>
+        </div>
+        <div class="cs-callout" style="margin-top:26px;">
+          Building WGU's first LLM chatbot required balancing innovation with pragmatism, technical excellence with business urgency, and AI capability with human touch. Clear roles for a 25+ person team, rigorous evaluation that moved accuracy from 15% to 81.7% in three months, disciplined risk documentation, and strong product tenets carried the launch.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="cs-nextprev">
+      <a class="np-link prev" href="../index.html#work">← Back to<span class="title">Featured Work</span></a>
+      <a class="np-link next" href="enrollment-experience.html">Next case study<span class="title">Enrollment Experience →</span></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span class="fine">© <span id="year"></span> Zehra Mehdi. Built with care.</span>
+    <div class="foot-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Featured Work</a>
+      <a href="../index.html#projects">Side Projects</a>
+      <a href="mailto:zehramehdi12@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/zehra-mehdi" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
